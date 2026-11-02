@@ -1,8 +1,15 @@
 body
     {
-        background-color: white;
+        background-color: transparent;
+        color: inherit;
         font-family: sans-serif;
-        padding: 0;
+        margin: 0;
+    }
+
+main
+    {
+        background-color: transparent;
+        color: inherit;
     }
 
 .nav-menu
@@ -10,12 +17,15 @@ body
         display: flex;
         flex-direction: column;
         gap: 10px;
+        padding: 0;
+        margin: 0 0 25px 0;
+        list-style-type: none;
     }
 
 .nav-menu a
     {
         text-decoration: none;
-        color: black;
+        color: inherit;
         transition:all 0.3s ease;
     }
 
@@ -28,8 +38,9 @@ body
     {
         border: 1px solid #ccc;
         padding: 20px;
-        margin: 10px;
+        margin-top: 20px;
         border-radius: 5px;
+        background-color: transparent;
     }
 
 .button
@@ -53,6 +64,7 @@ body
         .nav-menu
         {
             flex-direction: row;
+            gap: 20px;
         }
     }
 
@@ -61,6 +73,7 @@ body
         body
         {
             max-width: 600px;
+            margin: 0 auto;
         }
     }
 
@@ -68,6 +81,15 @@ body
     {
         body
         {
-            background-color: lightgray;
+            background-color: transparent;
+            max-width: 800px;
         }
+    }
+@media (prefers-reduced-motion: reduce) 
+    {
+        .nav-menu a,
+        .button 
+            {
+                transition: none !important;
+            }
     }
